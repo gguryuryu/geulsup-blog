@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gguryuryu.github.io/geulsup-blog/sitemap.xml

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "files": [
+    ".github/workflows/pages.yml",
+    "README.md",
+    "public/.nojekyll",
+    "public/404.html",
+    "public/assets/blog.css",
+    "public/assets/blog.js",
+    "public/assets/favicon.svg",
+    "public/index.html",
+    "public/robots.txt",
+    "public/rss.xml",
+    "public/sitemap.xml"
+  ]
+}
