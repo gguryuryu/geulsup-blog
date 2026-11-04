@@ -1,4 +1,4 @@
-# 글숲
+# Folio
 
 https://gguryuryu.github.io/geulsup-blog/
 
