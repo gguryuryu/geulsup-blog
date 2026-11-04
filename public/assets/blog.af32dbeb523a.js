@@ -18,7 +18,7 @@
   let category=new URLSearchParams(location.search).get('category')||'',limit=12;
   function apply(){
     const query=input.value.trim().toLocaleLowerCase();let count=0;
-    for(const row of rows){const matched=(!category||row.dataset.categoryValue===category)&&(!query||row.dataset.search.includes(query));count+=Number(matched);row.hidden=!matched||count>limit;row.classList.toggle('is-latest',matched&&count===1);}
+    for(const row of rows){const matched=(!category||row.dataset.categoryValue===category)&&(!query||row.dataset.search.includes(query));count+=Number(matched);row.hidden=!matched||count>limit;}
     filters.forEach(button=>{const active=button.dataset.category===category;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
     if(counter)counter.textContent=count;if(title)title.textContent=category||'모든 글';if(empty)empty.hidden=count!==0;if(more)more.hidden=count<=limit;if(clear)clear.hidden=!input.value;
   }
