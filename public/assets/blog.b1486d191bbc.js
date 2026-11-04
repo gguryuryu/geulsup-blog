@@ -20,7 +20,7 @@
     const query=input.value.trim().toLocaleLowerCase();let count=0;
     for(const row of rows){const matched=(!category||row.dataset.categoryValue===category)&&(!query||row.dataset.search.includes(query));count+=Number(matched);row.hidden=!matched||count>limit;}
     filters.forEach(button=>{const active=button.dataset.category===category;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
-    if(counter)counter.textContent=count;if(title)title.textContent=category||'모든 글';if(empty)empty.hidden=count!==0;if(more)more.hidden=count<=limit;if(clear)clear.hidden=!input.value;
+    if(counter)counter.textContent=count;if(title)title.textContent=category||'글';if(empty)empty.hidden=count!==0;if(more)more.hidden=count<=limit;if(clear)clear.hidden=!input.value;
   }
   function setCategory(value){category=value;limit=12;const url=new URL(location.href);if(category)url.searchParams.set('category',category);else url.searchParams.delete('category');history.replaceState(null,'',url);apply();}
   input.addEventListener('input',()=>{limit=12;apply();});
