@@ -249,3 +249,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
 @media(prefers-reduced-motion:reduce) {
   *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
 }
+
+.home-header-actions{display:flex;align-items:center;gap:22px}.dashboard-nav-link{font-family:var(--ui);font-size:13px;color:var(--muted)}.dashboard-nav-link:hover{color:var(--ink)}
