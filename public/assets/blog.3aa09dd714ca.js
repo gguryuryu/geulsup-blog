@@ -1,6 +1,6 @@
 (()=>{
   const themeButton=document.querySelector('[data-theme-toggle]');
-  const syncThemeLabel=()=>{if(themeButton){const label=document.documentElement.dataset.theme==='dark'?'밝은 화면으로 전환':'어두운 화면으로 전환';themeButton.setAttribute('aria-label',label);themeButton.title=label;}};
+  const syncThemeLabel=()=>{if(themeButton){const dark=document.documentElement.dataset.theme==='dark',label=dark?'밝은 화면으로 전환':'어두운 화면으로 전환';themeButton.setAttribute('aria-label',label);themeButton.setAttribute('aria-pressed',String(dark));themeButton.title=label;}};
   syncThemeLabel();
   themeButton?.addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('geulsup-blog-theme',theme);}catch{}syncThemeLabel();});
 
